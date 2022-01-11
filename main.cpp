@@ -15,12 +15,16 @@ int main(int argc, char **argv) {
 
     //
     auto* window = new MainWindow();
-    auto* editor = new Ui::MainWindow();
+    auto* bluring = new Ui::MainWindow();
 
     //
-    editor->setupUi(window);
-    window->txtEditor = editor->plainTextEdit;
-    window->viewer = editor->widget;
+    bluring->setupUi(window);
+    window->label = bluring->label;
+    window->slider = bluring->horizontalSlider;
+
+    //
+    bluring->horizontalSlider->setMinimum(0);
+    bluring->horizontalSlider->setMaximum(10);
 
     //
     window->show();

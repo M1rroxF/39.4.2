@@ -18,7 +18,7 @@ find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets Core WebEngineCore WebEngi
 set(PROJECT_SOURCES
         main.cpp
         MainWindow.ui
-        mainWindow.h
+        MainWindow.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
