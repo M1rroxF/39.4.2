@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>396</width>
-    <height>379</height>
+    <width>660</width>
+    <height>329</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,23 +18,25 @@
     <item row="0" column="0">
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>2</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
         <property name="text">
          <string>TextLabel</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QSlider" name="horizontalSlider">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pushButton">
-        <property name="text">
-         <string>PushButton</string>
         </property>
        </widget>
       </item>
@@ -47,7 +49,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>396</width>
+     <width>660</width>
      <height>21</height>
     </rect>
    </property>
@@ -57,40 +59,24 @@
  <resources/>
  <connections>
   <connection>
-   <sender>horizontalSlider</sender>
-   <signal>valueChanged(int)</signal>
+   <sender>lineEdit</sender>
+   <signal>textEdited(QString)</signal>
    <receiver>MainWindow</receiver>
-   <slot>SetBlur(int)</slot>
+   <slot>textChecked(QString)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>76</x>
-     <y>307</y>
+     <x>277</x>
+     <y>113</y>
     </hint>
     <hint type="destinationlabel">
-     <x>20</x>
-     <y>298</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>openNewImg()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>187</x>
-     <y>336</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>197</x>
-     <y>320</y>
+     <x>275</x>
+     <y>163</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
-  <slot>setBlur(int)</slot>
   <slot>openNewImg()</slot>
+  <slot>textChecked(QString)</slot>
  </slots>
 </ui>
