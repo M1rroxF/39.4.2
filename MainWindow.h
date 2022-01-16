@@ -22,7 +22,7 @@ public:
 
 public slots:
     void textChecked(QString text) {
-        QRegularExpression exp("^+(\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d\\d)$");
+        QRegularExpression exp("^+(\\d{11})$");
         if (exp.match(text).hasMatch()) {
             label->setText("Ok");
             label->setStyleSheet("QLabel {color : green}");
